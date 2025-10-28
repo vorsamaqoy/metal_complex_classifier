@@ -1,6 +1,6 @@
 # MetalComplexClassifier
 
-**AI-Driven Prediction of Photoactive Metal Complexes for Cancer Phototherapy**
+**Predizione AI di Complessi Metallici Fotoattivi per la Fototerapia Oncologica**
 
 [![Python](https://img.shields.io/badge/Python-3.10+-blue.svg)](https://www.python.org/)
 [![Machine Learning](https://img.shields.io/badge/ML-XGBoost-orange.svg)](https://xgboost.ai/)
@@ -9,92 +9,91 @@
 
 ---
 
-## 🎯 Project Overview
+## 🎯 Panoramica del Progetto
 
-This repository implements a **production-grade machine learning pipeline** for predicting light absorption properties of transition metal complexes (Pt, Ir, Ru, Rh) in the therapeutic window (600-850 nm), critical for photodynamic therapy (PDT) and photoactivated chemotherapy (PACT) applications.
+Questo repository implementa una **pipeline di machine learning di livello production** per predire le proprietà di assorbimento della luce di complessi di metalli di transizione (Pt, Ir, Ru, Rh) nella finestra terapeutica (600-850 nm), fondamentali per applicazioni di terapia fotodinamica (PDT) e chemioterapia fotoattivata (PACT).
 
-**Key Achievement**: Developed an interpretable AI model that **accelerates drug candidate screening by 1000x** compared to traditional computational chemistry methods (TD-DFT), while maintaining **96% accuracy** on validation sets.
-
----
-
-## 🚀 Technical Highlights
-
-### Machine Learning Architecture
-- **Model**: Extreme Gradient Boosting Classifier (XGBoost) with custom hyperparameter optimization
-- **Feature Engineering**: Implemented AtomPairs2D molecular descriptors with 118 computed features
-- **Data Pipeline**: End-to-end automated workflow from molecular SMILES to prediction
-- **Model Interpretability**: Decision tree analysis for actionable chemical insights
-
-### Performance Metrics
-```
-Accuracy:    96%
-Precision:   94%
-Recall:      93%
-F1-Score:    93%
-AUC-ROC:     0.96
-```
-
-### Dataset Scale
-- **9,775** transition metal complexes from Reaxys database
-- Binary classification (active/inactive in therapeutic window)
-- Handled severe class imbalance using intelligent undersampling strategies
+**Risultato Chiave**: Sviluppato un modello AI interpretabile che **accelera lo screening dei candidati farmaceutici di 1000 volte** rispetto ai metodi tradizionali di chimica computazionale (TD-DFT), mantenendo un'**accuratezza del 96%** sui set di validazione.
 
 ---
 
-## 💡 Core Competencies Demonstrated
+## 🚀 Caratteristiche Tecniche
 
-### 1. Advanced Machine Learning
-- **Ensemble Methods**: XGBoost, Random Forest, Gradient Boosting
-- **Model Selection**: Systematic comparison of 6 classification algorithms
-- **Hyperparameter Optimization**: Random Grid Search with stratified cross-validation
-- **Feature Selection**: Recursive Feature Elimination (RFE) and Permutation Feature Importance
+### Architettura di Machine Learning
+- **Modello**: Classificatore Extreme Gradient Boosting (XGBoost) con ottimizzazione personalizzata degli iperparametri
+- **Feature Engineering**: Implementati descrittori molecolari AtomPairs2D con 118 feature calcolate
+- **Pipeline dei Dati**: Workflow automatizzato end-to-end da SMILES molecolare a predizione
+- **Interpretabilità del Modello**: Analisi degli alberi decisionali per insight chimici azionabili
 
-### 2. Production-Ready Code Architecture
+### Metriche di Performance
+```
+Accuratezza:    96%
+Precisione:     94%
+Recall:         93%
+F1-Score:       93%
+AUC-ROC:        0.96
+```
+
+### Scala del Dataset
+- **9.775** complessi di metalli di transizione dal database Reaxys
+- Classificazione binaria (attivo/inattivo nella finestra terapeutica)
+- Gestito severo sbilanciamento delle classi usando strategie intelligenti di undersampling
+
+---
+
+
+### 1. Machine Learning
+- **Metodi Ensemble**: XGBoost, Random Forest, Gradient Boosting
+- **Selezione del Modello**: Confronto sistematico di 6 algoritmi di classificazione
+- **Ottimizzazione degli Iperparametri**: Random Grid Search con cross-validation stratificata
+- **Selezione delle Feature**: Recursive Feature Elimination (RFE) e Permutation Feature Importance
+
+### 2. Architettura del Codice Production-Ready
 ```
 MetalComplexClassifier/
-├── decisionanalyzer/          # Core ML library (modular design)
+├── decisionanalyzer/          # Libreria ML core (design modulare)
 │   ├── __init__.py
-│   ├── classifier.py          # Model training and evaluation
-│   ├── tree_analyzer.py       # Decision tree interpretation
-│   └── utils.py               # Feature engineering utilities
-├── data/                      # Dataset management
-├── models/                    # Trained model artifacts
-└── notebooks/                 # Research and analysis
+│   ├── classifier.py          # Training e valutazione del modello
+│   ├── tree_analyzer.py       # Interpretazione dell'albero decisionale
+│   └── utils.py               # Utility per feature engineering
+├── data/                      # Gestione del dataset
+├── models/                    # Artefatti del modello addestrato
+└── notebooks/                 # Ricerca e analisi
 ```
 
-### 3. Scientific Computing Stack
-- **Cheminformatics**: RDKit for molecular descriptor computation
-- **Data Processing**: Pandas, NumPy for efficient large-scale data manipulation
-- **Visualization**: Matplotlib, Seaborn for publication-quality figures
-- **Model Persistence**: Joblib for serialization
+### 3. Stack di Calcolo Scientifico
+- **Cheminformatica**: RDKit per il calcolo di descrittori molecolari
+- **Elaborazione Dati**: Pandas, NumPy per manipolazione efficiente di dati su larga scala
+- **Visualizzazione**: Matplotlib, Seaborn per figure di qualità pubblicabile
+- **Persistenza del Modello**: Joblib per la serializzazione
 
-### 4. Interpretable AI
-- Custom decision path analysis revealing molecular structure-activity relationships
-- Feature importance ranking identifying key chemical descriptors
-- Pure leaf node extraction for rule-based chemical design
-
----
-
-## 🔬 Scientific Impact
-
-**Published Research**: Journal of Cheminformatics (2025)  
-**Citation**: Vigna et al., "Prediction of Pt, Ir, Ru, and Rh complexes light absorption in the therapeutic window for phototherapy using machine learning"
-
-### Innovation
-This represents the **first application of interpretable ML** to predict UV-vis absorption properties of metal complexes for phototherapy, bridging the gap between computational chemistry and applied AI.
+### 4. AI Interpretabile
+- Analisi personalizzata dei percorsi decisionali che rivelano relazioni struttura-attività molecolare
+- Ranking dell'importanza delle feature identificando i descrittori chimici chiave
+- Estrazione di nodi foglia puri per design chimico basato su regole
 
 ---
 
-## 🛠️ Installation & Usage
+## 🔬 Impatto Scientifico
 
-### Quick Start
+**Ricerca Pubblicata**: Journal of Cheminformatics (2025)  
+**Citazione**: Vigna et al., "Prediction of Pt, Ir, Ru, and Rh complexes light absorption in the therapeutic window for phototherapy using machine learning"
+
+### Innovazione
+Questa rappresenta la **prima applicazione di ML interpretabile** per predire proprietà di assorbimento UV-vis di complessi metallici per fototerapia, colmando il divario tra chimica computazionale e AI applicata.
+
+---
+
+## 🛠️ Installazione e Utilizzo
+
+### Avvio Rapido
 ```bash
 git clone https://github.com/vorsamaqoy/MetalComplexClassifier.git
 cd MetalComplexClassifier
 pip install -r requirements.txt
 ```
 
-### Basic Usage
+### Utilizzo Base
 ```python
 import decisionanalyzer as dan
 
@@ -105,7 +104,7 @@ analyzer.sample_decision_path(sample_id=1770)
 analyzer.visualize_tree_rules()
 ```
 
-### Training Pipeline
+### Pipeline di Training
 ```python
 from decisionanalyzer import ModelPipeline
 
@@ -118,15 +117,15 @@ pipeline.evaluate()
 
 ---
 
-## 📊 Key Features
+## 📊 Funzionalità Principali
 
-### 1. Automated Feature Engineering
-Computes 118 molecular descriptors from SMILES notation:
-- Topological distances (T descriptors)
-- Functional group counts (F descriptors)
-- Bond connectivity patterns (B descriptors)
+### 1. Feature Engineering Automatizzato
+Calcola 118 descrittori molecolari dalla notazione SMILES:
+- Distanze topologiche (descrittori T)
+- Conteggio di gruppi funzionali (descrittori F)
+- Pattern di connettività dei legami (descrittori B)
 
-### 2. Model Interpretability Tools
+### 2. Strumenti di Interpretabilità del Modello
 ```python
 analyzer.get_feature_importance()
 
@@ -135,8 +134,8 @@ pure_leaves = analyzer.get_pure_leaves()
 decision_rules = analyzer.extract_rules(node_id=780)
 ```
 
-### 3. Chemical Design Support
-Extract decision paths for inactive compounds to identify structural modifications:
+### 3. Supporto al Design Chimico
+Estrai percorsi decisionali per composti inattivi per identificare modifiche strutturali:
 ```python
 inactive_sample = 1770
 analyzer.suggest_modifications(inactive_sample)
@@ -144,68 +143,51 @@ analyzer.suggest_modifications(inactive_sample)
 
 ---
 
-## 📈 Results & Validation
+## 📈 Risultati e Validazione
 
-### Cross-Validation Strategy
-- **Stratified 10-Fold CV** maintaining class distribution
-- **Train/Test Split**: 80/20 with random state for reproducibility
-- **Metrics**: Comprehensive evaluation (Accuracy, Precision, Recall, F1, AUC-ROC)
+### Strategia di Cross-Validation
+- **Stratified 10-Fold CV** mantenendo la distribuzione delle classi
+- **Split Train/Test**: 80/20 con random state per riproducibilità
+- **Metriche**: Valutazione completa (Accuratezza, Precisione, Recall, F1, AUC-ROC)
 
-### Comparative Analysis
-Benchmark against 5 baseline algorithms:
-- Logistic Regression
-- Decision Tree
+### Analisi Comparativa
+Benchmark rispetto a 5 algoritmi baseline:
+- Regressione Logistica
+- Albero Decisionale
 - Random Forest
 - Support Vector Classifier
 - Gradient Boosting Classifier
 
-**XGBoost + AtomPairs2D emerged as the optimal combination**
+**XGBoost + AtomPairs2D emerso come combinazione ottimale**
 
 ---
 
-## 🎓 Applications
+## 🎓 Applicazioni
 
-### Pharmaceutical Industry
-- **High-throughput screening** of photoactive drug candidates
-- **Lead optimization** for PDT/PACT agents
-- **Reduce R&D costs** by eliminating unpromising compounds early
+### Industria Farmaceutica
+- **Screening ad alto throughput** di candidati farmaceutici fotoattivi
+- **Ottimizzazione dei lead** per agenti PDT/PACT
+- **Riduzione dei costi R&D** eliminando precocemente composti non promettenti
 
-### Computational Chemistry
-- **Faster than TD-DFT** by orders of magnitude
-- **Resource-efficient** alternative for large-scale predictions
-- **Interpretable results** for rational molecular design
+### Chimica Computazionale
+- **Più veloce del TD-DFT** di ordini di grandezza
+- **Alternativa resource-efficient** per predizioni su larga scala
+- **Risultati interpretabili** per design molecolare razionale
 
 ---
 
-## 🔧 Technical Stack
+## 🔧 Stack Tecnologico
 
-| Category | Technologies |
+| Categoria | Tecnologie |
 |----------|-------------|
-| **ML Frameworks** | XGBoost, Scikit-learn, Pandas |
-| **Molecular Descriptors** | RDKit, AtomPairs2D, WalkAndPathCounts |
+| **Framework ML** | XGBoost, Scikit-learn, Pandas |
+| **Descrittori Molecolari** | RDKit, AtomPairs2D, WalkAndPathCounts |
 | **Data Science** | NumPy, SciPy, Matplotlib, Seaborn |
-| **Development** | Python 3.10+, Jupyter, Git |
-| **Research Tools** | Gaussian16 (TD-DFT validation) |
+| **Sviluppo** | Python 3.10+, Jupyter, Git |
+| **Strumenti di Ricerca** | Gaussian16 (validazione TD-DFT) |
 
----
 
-## 🏆 Why This Project Stands Out
-
-### Business Value
-✅ **Production-Ready**: Modular, tested, deployable code  
-✅ **Scalable**: Handles datasets of 10K+ compounds efficiently  
-✅ **Documented**: Clear code architecture and API  
-✅ **Validated**: Peer-reviewed scientific methodology  
-
-### Technical Excellence
-✅ **Modern ML Pipeline**: From raw data to deployed model  
-✅ **Best Practices**: Cross-validation, feature selection, hyperparameter tuning  
-✅ **Interpretability**: Actionable insights, not just black-box predictions  
-✅ **Domain Integration**: Chemistry + AI in production environment  
-
----
-
-## 📚 Citation
+## 📚 Citazione
 
 ```bibtex
 @article{vigna2025metalcomplex,
@@ -221,25 +203,25 @@ Benchmark against 5 baseline algorithms:
 
 ---
 
-## 👤 Author
+## 👤 Autore
 
 **Vincenzo Vigna**  
-Computational Chemistry & Machine Learning Researcher
+Ricercatore in Chimica Computazionale e Machine Learning
 
-Transitioning from academic research to AI/ML engineering roles in the tech industry.
+In transizione dalla ricerca accademica a ruoli di ingegneria AI/ML nell'industria tecnologica.
 
-**Core Expertise**: Applied Machine Learning • Cheminformatics • Python Development • Production ML Systems
+**Competenze Core**: Applied Machine Learning • Cheminformatica • Sviluppo Python • Sistemi ML in Produzione
 
 ---
 
-## 📫 Connect
+## 📫 Contatti
 
 [![GitHub](https://img.shields.io/badge/GitHub-vorsamaqoy-black?logo=github)](https://github.com/vorsamaqoy)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connect-blue?logo=linkedin)](https://www.linkedin.com/in/vincenzo-vigna-931a202a)
-[![Email](https://img.shields.io/badge/Email-Contact-red?logo=gmail)](mailto:vin.cenzo96@hotmail.it)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Connetti-blue?logo=linkedin)](https://www.linkedin.com/in/vincenzo-vigna-931a202a)
+[![Email](https://img.shields.io/badge/Email-Contatto-red?logo=gmail)](mailto:vin.cenzo96@hotmail.it)
 
 ---
 
-## 📄 License
+## 📄 Licenza
 
-This project is licensed under the terms specified in the LICENSE file. Research data available upon reasonable request.
+Questo progetto è concesso in licenza secondo i termini specificati nel file LICENSE. Dati di ricerca disponibili su richiesta ragionevole.
